@@ -1,10 +1,15 @@
 package ua.lviv.iot.algo.part1.lab1.Plate;
-import lombok.*;
+import lombok.Setter;
+import lombok.Getter;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 @Setter
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
+
 public class Plate {
     private double diameter;
     private String material;
@@ -46,6 +51,11 @@ public class Plate {
         plates[1]=instance.getInstance();
         plates[2]=instance.getInstance();
         plates[3]=new Plate();
+        plates[3].setClean(false);
+        plates[3].setColor("white");
+        plates[3].setDiameter(2.7);
+        plates[3].setMaterial("metal");
+        plates[3].setHasFood(false);
 
         for (int i=0; i<4; i++){
             System.out.println(plates[i]);
